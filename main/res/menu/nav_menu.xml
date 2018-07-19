@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/project_homepage"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Project_Homepage" />
+        <item
+            android:id="@+id/download_link"
+            android:icon="@drawable/ic_file_download_black_24dp"
+            android:title="Download_Link" />
+        <item
+            android:id="@+id/about_me"
+            android:icon="@drawable/ic_person_outline_black_24dp"
+            android:title="About_Me" />
+        <item
+            android:id="@+id/my_github"
+            android:icon="@drawable/ic_help_outline_black_24dp"
+            android:title="My_Github" />
+        <item
+            android:id="@+id/quit_app"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Quit_App" />
+    </group>
+</menu>
