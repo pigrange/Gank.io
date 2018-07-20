@@ -21,34 +21,23 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/MyGreen"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:layout_scrollFlags="scroll|enterAlways">
+                app:layout_scrollFlags="scroll|enterAlways"/>
+            <android.support.design.widget.TabLayout
+                app:tabIndicatorColor="@android:color/white"
+                android:background="@color/MyGreen"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:id="@+id/mTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
-            </android.support.v7.widget.Toolbar>
         </android.support.design.widget.AppBarLayout>
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/mSwipeRefreshLayout"
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mViewPager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/mRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-            </android.support.v7.widget.RecyclerView>
-
-            <!--<TextView-->
-            <!--android:id="@+id/noWIFIV"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:text="网络连接失败"-->
-            <!--android:textSize="30sp"-->
-            <!--android:gravity="center_horizontal"-->
-            <!--android:visibility="gone" />-->
-
-        </android.support.v4.widget.SwipeRefreshLayout>
     </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView

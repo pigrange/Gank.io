@@ -1,5 +1,7 @@
 package com.pigrange.rxjavaretrofittest.Model;
 
+import android.support.v7.widget.RecyclerView;
+
 import java.util.List;
 
 public class GanHuo {
@@ -27,7 +29,7 @@ public class GanHuo {
         this.results = results;
     }
 
-    public class Result {
+    public class Result  {
         private String _id;
         private String createdAt;
         private String desc;

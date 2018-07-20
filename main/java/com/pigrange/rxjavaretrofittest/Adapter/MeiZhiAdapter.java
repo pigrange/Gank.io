@@ -1,4 +1,4 @@
-package com.pigrange.rxjavaretrofittest.Model;
+package com.pigrange.rxjavaretrofittest.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,32 +12,26 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.pigrange.rxjavaretrofittest.Activity.ShowImage;
+import com.pigrange.rxjavaretrofittest.Model.GanHuo;
 import com.pigrange.rxjavaretrofittest.R;
 
 import java.util.List;
 
-public class MeiZhiAdapter extends RecyclerView.Adapter<MeiZhiAdapter.ViewHolder> {
-    private List<GanHuo.Result> mResultList;
+public class MeiZhiAdapter extends BaseAdapter<MeiZhiAdapter.MeiZhiViewHolder> {
     private Context mContext;
-    private adapterItemOnclickListener mAdapterItemOnclickListener;
+    private List<GanHuo.Result> mResultList;
 
     public MeiZhiAdapter(List<GanHuo.Result> results) {
+        super(results);
         mResultList = results;
-    }
-
-    public void setAdapterItemOnclickListener(adapterItemOnclickListener listener) {
-        mAdapterItemOnclickListener = listener;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MeiZhiViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         mContext = parent.getContext();
-        View v = LayoutInflater
-                .from(mContext)
-                .inflate(R.layout.singeimage_view, parent, false);
-
-        final ViewHolder holder = new ViewHolder(v);
+        View v = LayoutInflater.from(mContext).inflate(R.layout.meizhi_item, parent, false);
+        final MeiZhiViewHolder holder = new MeiZhiViewHolder(v);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,15 +39,14 @@ public class MeiZhiAdapter extends RecyclerView.Adapter<MeiZhiAdapter.ViewHolder
                 GanHuo.Result result = mResultList.get(position);
                 Intent intent = new Intent(mContext, ShowImage.class);
                 intent.putExtra("url", result.getUrl());
-                mAdapterItemOnclickListener.onclick(intent);
-                //todo 查看大图
+                onItemClick(intent);
             }
         });
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MeiZhiViewHolder holder, int position) {
         GanHuo.Result mResult = mResultList.get(position);
         Glide.with(mContext)
                 .load(mResult.getUrl())
@@ -63,22 +56,13 @@ public class MeiZhiAdapter extends RecyclerView.Adapter<MeiZhiAdapter.ViewHolder
                 .into(holder.mImageView);
     }
 
-    @Override
-    public int getItemCount() {
-        return mResultList.size();
-    }
-
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    static class MeiZhiViewHolder extends RecyclerView.ViewHolder {
         private ImageView mImageView;
 
-        ViewHolder(View itemView) {
+        MeiZhiViewHolder(View itemView) {
             super(itemView);
-            mImageView = itemView.findViewById(R.id.mImageView);
+            mImageView = itemView.findViewById(R.id.meizhi_item_imageView);
         }
-    }
-
-    public interface adapterItemOnclickListener {
-        void onclick(Intent intent);
     }
 
 }

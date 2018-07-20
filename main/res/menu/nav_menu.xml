@@ -4,22 +4,22 @@
         <item
             android:id="@+id/project_homepage"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Project_Homepage" />
+            android:title="主页" />
         <item
             android:id="@+id/download_link"
             android:icon="@drawable/ic_file_download_black_24dp"
-            android:title="Download_Link" />
+            android:title="下载连接" />
         <item
             android:id="@+id/about_me"
             android:icon="@drawable/ic_person_outline_black_24dp"
-            android:title="About_Me" />
+            android:title="关于我" />
         <item
             android:id="@+id/my_github"
             android:icon="@drawable/ic_help_outline_black_24dp"
-            android:title="My_Github" />
+            android:title="我的Github" />
         <item
             android:id="@+id/quit_app"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
-            android:title="Quit_App" />
+            android:title="退出软件" />
     </group>
 </menu>
