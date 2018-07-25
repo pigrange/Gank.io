@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/project_homepage"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="主页" />
+            android:title="我的主页" />
         <item
             android:id="@+id/download_link"
             android:icon="@drawable/ic_file_download_black_24dp"
-            android:title="下载连接" />
+            android:title="下载链接" />
+    </group>
+
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/about_me"
             android:icon="@drawable/ic_person_outline_black_24dp"
-            android:title="关于我" />
+            android:title="关于App" />
         <item
-            android:id="@+id/my_github"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:id="@+id/shareApp"
+            android:title="分享App" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/zhihu_paper"
             android:icon="@drawable/ic_help_outline_black_24dp"
-            android:title="我的Github" />
+            android:title="知乎日报" />
         <item
             android:id="@+id/quit_app"
             android:icon="@drawable/ic_exit_to_app_black_24dp"
             android:title="退出软件" />
     </group>
+
 </menu>

@@ -20,7 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.ShowImage" />
-        <activity android:name=".Activity.ShowGanHuo"></activity>
+        <activity android:name=".Activity.WebViewActivity" />
+        <activity android:name=".Activity.AboutMe" />
+        <activity android:name=".Activity.ZhiHuDailyActivity" />
+        <activity android:name=".Activity.ShowZhiHuNews"></activity>
     </application>
 
 </manifest>

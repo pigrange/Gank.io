@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Activity.ShowZhiHuNews">
+    <com.mingle.widget.LoadingView
+        app:loadingText="载入中。。。"
+        android:id="@+id/zhihu_news_loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <WebView
+        android:id="@+id/zhihu_news_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+    <RelativeLayout
+        android:id="@+id/zhihu_news_noWIFI"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/nowifi_image"
+            android:layout_width="130dp"
+            android:layout_height="117dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="179dp"
+            android:src="@drawable/no_wifi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="222dp"
+            android:text="哦嚯,没有网络了!!!"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,7 +1,6 @@
-package com.pigrange.rxjavaretrofittest.RxJava;
+package com.pigrange.rxjavaretrofittest.Utils;
 
 import com.pigrange.rxjavaretrofittest.Model.GanHuo;
-import com.pigrange.rxjavaretrofittest.Retrofit.MyRetrofit;
 import com.pigrange.rxjavaretrofittest.Retrofit.MyService;
 
 import io.reactivex.Observable;
@@ -11,7 +10,7 @@ import io.reactivex.schedulers.Schedulers;
 public class RxJavaUtil {
     public static Observable<GanHuo> getGanHuo(String type, int count, int page) {
         return MyRetrofit
-                .getRetrofit()
+                .getGankRetrofit()
                 .create(MyService.class)
                 .getGanHuo(type, count,page)
                 .subscribeOn(Schedulers.io())
@@ -19,14 +18,14 @@ public class RxJavaUtil {
     }
     public static Observable<GanHuo> getToday(){
         return MyRetrofit
-                .getRetrofit()
+                .getGankRetrofit()
                 .create(MyService.class)
-                .getToday()
+                .getToday("today")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread());
     }
     public static Observable<GanHuo> getRandomImage(){
-        return MyRetrofit.getRetrofit()
+        return MyRetrofit.getGankRetrofit()
                 .create(MyService.class)
                 .getRandomImage("福利",20)
                 .subscribeOn(Schedulers.io())

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.pigrange.rxjavaretrofittest.Activity.ShowImage;
+import com.pigrange.rxjavaretrofittest.BaseClass.BaseAdapter;
 import com.pigrange.rxjavaretrofittest.Model.GanHuo;
 import com.pigrange.rxjavaretrofittest.R;
 

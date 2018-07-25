@@ -1,16 +1,16 @@
-package com.pigrange.rxjavaretrofittest.Interface;
+package com.pigrange.rxjavaretrofittest.BaseClass;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-public abstract class EndLessOnScrollListener extends RecyclerView.OnScrollListener {
+public abstract class LoadMoreScrollListener extends RecyclerView.OnScrollListener {
 
     private LinearLayoutManager mLinearLayoutManager;
     private int currentPage = 0;
     private int previousTotal = 0;
     private boolean loading = true;
 
-    public EndLessOnScrollListener(LinearLayoutManager linearLayoutManager) {
+    public LoadMoreScrollListener(LinearLayoutManager linearLayoutManager) {
         this.mLinearLayoutManager = linearLayoutManager;
     }
 

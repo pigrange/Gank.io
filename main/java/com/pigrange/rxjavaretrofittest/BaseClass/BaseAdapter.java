@@ -1,4 +1,4 @@
-package com.pigrange.rxjavaretrofittest.Adapter;
+package com.pigrange.rxjavaretrofittest.BaseClass;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -9,13 +9,13 @@ import java.util.List;
 
 public abstract class BaseAdapter<T extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<T> {
     private List<GanHuo.Result> mResultList;
-    void onItemClick(Intent intent) {
+    protected void onItemClick(Intent intent) {
         mClickListener.click(intent);
     }
 
     private AdapterItemClickListener mClickListener;
 
-    BaseAdapter(List<GanHuo.Result> results) {
+    protected BaseAdapter(List<GanHuo.Result> results) {
         mResultList = results;
     }
 

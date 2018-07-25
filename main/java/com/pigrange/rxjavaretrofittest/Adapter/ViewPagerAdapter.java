@@ -6,16 +6,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.pigrange.rxjavaretrofittest.Fragment.MainFragment;
+import com.pigrange.rxjavaretrofittest.Fragment.GanHuoFragment;
 
 import java.util.List;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     private String[] tabArray;
     private Context mContext;
-    private List<MainFragment> mFragments;
+    private List<Fragment> mFragments;
 
-    public ViewPagerAdapter(FragmentManager fm, Context context, List<MainFragment> fragments, String[] tabs) {
+    public ViewPagerAdapter(FragmentManager fm, Context context, List<Fragment> fragments, String[] tabs) {
         super(fm);
         this.tabArray = tabs;
         this.mContext = context;

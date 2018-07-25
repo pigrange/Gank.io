@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">RxJavaRetrofitTest</string>
+
+
+    //About the App
+    <string name="gank_intro">Gank是干活集中营的第三方客户端。\n
+        \t 主要目的是找找项目来练习Android开发，并且学习RxJava和Retrofit的运用，以及学习相关Api的调用。\n\n
+        \t gank.io是一个致力于为广大开发者分享最新，最潮和实用干货的一个社区。另外，每天一张妹子图，极大的缓解开发者的疲惫，顿时满血复活。\n\n
+        \t 感谢那些默默为开源努力付出的开发者们，这个APP的完成少不了他们的帮助。\n
+    </string>
+    <string name="Ref">
+        RxJava2 \nRetrofit \nGlide \nRxAndroid \nCircleImageView\nandroid-shapeLoadingView \n
+    </string>
+
+    //ShareUtils
+    <string name="share_app">分享一款技术与妹子共存的福利软件。戳我下载,(填写链接):</string>
+    <string name="share_app_to_friends">分享Gank给朋友</string>
 </resources>
