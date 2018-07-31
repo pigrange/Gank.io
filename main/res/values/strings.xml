@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RxJavaRetrofitTest</string>
+    <string name="app_name">Gank</string>
 
 
     //About the App
@@ -15,4 +15,5 @@
     //ShareUtils
     <string name="share_app">分享一款技术与妹子共存的福利软件。戳我下载,(填写链接):</string>
     <string name="share_app_to_friends">分享Gank给朋友</string>
+    <string name="share_ganhuo_to_friends">分享一个我在GitHub上面看到的不错的仓库:</string>
 </resources>

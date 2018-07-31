@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mingle.widget.LoadingView
+        android:id="@+id/zhihu_news_loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:loadingText="载入中。。。" />
+
+    <WebView
+        android:id="@+id/zhihu_news_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/zhihu_news_noWIFI"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="33dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/nowifi_image"
+            android:layout_width="130dp"
+            android:layout_height="117dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="154dp"
+            android:src="@drawable/no_wifi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nowifi_image"
+            android:layout_centerHorizontal="true"
+            android:text=". . . . . . . . . . . . "
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="204dp"
+            android:text="哦嚯,没有网络了!!!"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+</LinearLayout>
